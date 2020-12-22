@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { menuData } from '../data/MenuData';
 
 const DropdownContainer = styled.div`
     position: fixed;
@@ -21,7 +22,23 @@ const DropdownContainer = styled.div`
 function Dropdown() {
     return (
         <DropdownContainer>
-            <h1>D</h1>
+           <Icon>
+               <CloseIcon/>
+           </Icon>
+           <DropdownWrapper>
+               <DropdownMenu>
+                   {menuData.map((item,index) => {
+                       return (
+                           <DropdownLink
+                           key={index}
+                           to={item.link}
+                           >
+
+                           </DropdownLink>
+                       )
+                   })}
+               </DropdownMenu>
+           </DropdownWrapper>
         </DropdownContainer>
     )
 }
