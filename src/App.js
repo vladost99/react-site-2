@@ -1,8 +1,9 @@
 import React, { useState} from 'react';
 import Dropdown from './components/Dropdown';
 import Hero from './components/Hero';
-import infoSection from './components/infoSection';
+import InfoSection from './components/infoSection';
 import Navbar from './components/Navbar';
+import { infoData } from './data/InfoData';
 import { SliderData } from './data/SliderData';
 import GlobalStyle from './globalStyles';
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Navbar toggle={toggle}/>
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={SliderData} />
-      <infoSection/>
+      <InfoSection {...infoData}/>
    </>
   );
 }

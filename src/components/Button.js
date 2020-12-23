@@ -8,7 +8,7 @@ export const Button = styled(Link)`
     outline: none;
     border: none;
     min-width: 100px;
-    max-width: 100px;
+    max-width: ${({round}) => (round ?'160px' : '100px')};
     cursor: pointer;
     text-decoration: none;
     transition: .3s;
